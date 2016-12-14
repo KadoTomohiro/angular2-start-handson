@@ -8,8 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { IssueComponent } from './issue/issue.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WikiComponent } from './wiki/wiki.component';
-import {routing, appRoutingProviders} from "./app.routes";
+import { routing, appRoutingProviders } from "./app.routes";
 import { MarkdownPipe } from './markdown.pipe';
+import { IssueStore } from "./issue/issue.store";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,10 @@ import { MarkdownPipe } from './markdown.pipe';
     HttpModule,
     routing
   ],
-  providers: [appRoutingProviders],
+  providers: [
+    appRoutingProviders,
+    IssueStore
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
