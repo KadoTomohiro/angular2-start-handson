@@ -1,3 +1,14 @@
-<p>
-  issue works!
-</p>
+<h2>Issues</h2>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <input type="text" name="title" ngModel required placeholder="title">
+  <textarea name="desc" ngModel required placeholder="desc"></textarea>
+  <button type="submit" [disabled]="!f.form.valid">登録</button>
+</form>
+
+<div ngClass="issues" *ngFor="let issue of issues; let i = index">
+  <div ngClass="row">{{i+1}}</div>
+  <button (click)="onDelete(i)">削除</button>
+  <p>{{issue.title}}</p>
+  <pre>{{issue.desc}}</pre>
+</div>
