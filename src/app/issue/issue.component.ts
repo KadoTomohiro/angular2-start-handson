@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Issue} from "./issue";
 import {NgForm} from "@angular/forms";
+import {IssueStore} from "./issue.store";
 
 @Component({
   selector: 'app-issue',
@@ -13,12 +14,12 @@ export class IssueComponent implements OnInit {
   //noinspection JSMismatchedCollectionQueryUpdate
   private issues: Issue[];
 
-  constructor() { }
+  constructor(private issueStore: IssueStore) { }
 
   //noinspection JSUnusedGlobalSymbols
   ngOnInit(): void {
     this.issue = new Issue;
-    this.issues = [];
+    this.issues = this.issueStore.list;
   }
 
   public onSubmit(form: NgForm): void {
@@ -27,13 +28,13 @@ export class IssueComponent implements OnInit {
       desc: form.value.desc
     };
 
-    this.issues.push(issue);
+    this.issueStore.add(issue);
 
     form.reset();
   }
 
   public onDelete(index: number): void {
-    this.issues.splice(index, 1);
+    this.issueStore.delete(index);
   }
 
 }
