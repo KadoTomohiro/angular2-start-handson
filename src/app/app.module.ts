@@ -9,6 +9,7 @@ import { IssueComponent } from './issue/issue.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WikiComponent } from './wiki/wiki.component';
 import {routing, appRoutingProviders} from "./app.routes";
+import { MarkdownPipe } from './markdown.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {routing, appRoutingProviders} from "./app.routes";
     HomeComponent,
     IssueComponent,
     PageNotFoundComponent,
-    WikiComponent
+    WikiComponent,
+    MarkdownPipe
   ],
   imports: [
     BrowserModule,
