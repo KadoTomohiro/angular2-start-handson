@@ -11,7 +11,7 @@ import {IssueStore} from "./issue.store";
 export class IssueComponent implements OnInit {
 
 
-  constructor(private issueStore: IssueStore) { }
+  constructor() { }
 
   ngOnInit(): void { }
 

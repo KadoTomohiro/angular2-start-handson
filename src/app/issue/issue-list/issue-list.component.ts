@@ -16,11 +16,14 @@ export class IssueListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.issues = this.issueStore.list;
+     this.issueStore.allList()
+      .then(response => this.issues = response)
+      .catch(error => console.log(error));
   }
 
   public onDelete(index: number): void {
-    this.issueStore.delete(index);
+    this.issueStore.delete(index)
+      .catch(error => console.log(error));
   }
 
 }

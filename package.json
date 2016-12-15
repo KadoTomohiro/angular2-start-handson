@@ -4,7 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "ng serve",
+    "start": "concurrently \"ng serve --proxy-config proxy.conf.json\" \"node ./src/assets/server.js\"",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
@@ -41,6 +41,7 @@
     "angular2-universal-polyfills": "^2.1.0-rc.1",
     "body-parser": "^1.15.2",
     "codelyzer": "~2.0.0-beta.1",
+    "concurrently": "^3.1.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "jasmine-core": "2.5.2",
