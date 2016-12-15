@@ -1,15 +1,13 @@
 import {Routes, RouterModule} from "@angular/router";
-import {HomeComponent} from "./home/home.component";
 import {IssueComponent} from "./issue/issue.component";
-import {WikiComponent} from "./wiki/wiki.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {ModuleWithProviders} from "@angular/core";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
+  {path: 'home', loadChildren: 'app/home/home.module#HomeModule'},
   {path: 'issue', component: IssueComponent},
-  {path: 'wiki', component: WikiComponent},
+  {path: 'wiki', loadChildren: 'app/wiki/wiki.module#WikiModule'},
   {path: '**', component: PageNotFoundComponent}
 ];
 
