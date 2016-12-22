@@ -4,24 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { IssueComponent } from './issue/issue.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { routing, appRoutingProviders } from "./app.routes";
-// import { MarkdownPipe } from './markdown.pipe';
-import { IssueStore } from "./issue/issue.store";
-import { IssueDetailComponent } from './issue/issue-detail/issue-detail.component';
-import { IssueInputComponent } from './issue/issue-input/issue-input.component';
-import { IssueListComponent } from './issue/issue-list/issue-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IssueComponent,
-    PageNotFoundComponent,
-    // MarkdownPipe,
-    IssueDetailComponent,
-    IssueInputComponent,
-    IssueListComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +19,7 @@ import { IssueListComponent } from './issue/issue-list/issue-list.component';
     routing
   ],
   providers: [
-    appRoutingProviders,
-    IssueStore
+    appRoutingProviders
   ],
   bootstrap: [AppComponent]
 })

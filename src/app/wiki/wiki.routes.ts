@@ -5,10 +5,9 @@ import { ModuleWithProviders } from "@angular/core";
 const wikiRoutes: Routes = [
   {
     path: '',
-    component: WikiComponent
+    components: WikiComponent
   }
 ];
-
 
 export const wikiRoutingProviders: any[] = [];
 

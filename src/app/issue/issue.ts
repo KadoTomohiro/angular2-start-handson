@@ -1,4 +1,4 @@
-export class Issue {
+export interface Issue {
   title: string;
   desc: string;
 }
