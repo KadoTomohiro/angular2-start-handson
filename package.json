@@ -34,7 +34,7 @@
     "@types/jasmine": "2.5.38",
     "@types/marked": "0.0.28",
     "@types/node": "^6.0.42",
-    "angular-cli": "1.0.0-beta.22-1",
+    "angular-cli": "1.0.0-beta.24",
     "angular2-express-engine": "^2.1.0-rc.1",
     "angular2-platform-node": "^2.1.0-rc.1",
     "angular2-universal": "^2.1.0-rc.1",
