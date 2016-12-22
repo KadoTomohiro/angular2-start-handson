@@ -5,7 +5,7 @@ import { ModuleWithProviders } from "@angular/core";
 const wikiRoutes: Routes = [
   {
     path: '',
-    components: WikiComponent
+    component: WikiComponent
   }
 ];
 
